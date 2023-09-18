@@ -20,7 +20,7 @@ li {
 
 h1 {
   user-select: none;
-  font-size: 5vh;
+  font-size: 200%;
 }
 h1:nth-child(even) {
   color: white;
