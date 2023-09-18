@@ -7,8 +7,27 @@ ul {
   list-style-type: none;
 }
 
+li {
+  position: relative;
+  z-index: 2;
+}
+
+#title {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
 h1 {
-  text-align: right;
+  justify-content: end;
+  user-select: none;
+}
+h1:nth-child(odd) {
+  color: white;
+  z-index: 5;
+}
+h1:nth-child(even) {
+  color: black;
 }
 
 h2 {
@@ -17,6 +36,7 @@ h2 {
 
 p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 30px;
 }
 
 #bg {
@@ -28,14 +48,19 @@ p {
   width: 100%;
   height: 100%;
   z-index: 1;
-  transition: color 0.2s ease-out, background-color 0.8s ease;
+  transition: background-color 0.4s ease-in;
+}
+
+::selection {
+  background-color: white;
 }
 
 #t1 {
-  transition: color 1.5s ease, background-color 1.5s ease;
+  transition: color 0.5s ease, background-color 0.5s ease;
 }
-#t1::selection {
+#t1 p::selection {
   background-color: hsl(158, 100%, 35%);
+  color: white;
 }
 #t1 h3 {
   background-color: hsl(158, 100%, 35%);
@@ -45,25 +70,42 @@ p {
   background-color: white;
   color: hsl(158, 100%, 35%);
 }
+#t1 i {
+  color: hsl(158, 100%, 35%);
+}
+#t1 a {
+  color: hsl(158, 100%, 35%);
+}
 #t1:hover {
   color: white;
+  z-index: 4;
 }
-#t1:hover::selection {
-  background-color: hsl(158, 100%, 35%);
+#t1:hover p::selection {
+  background-color: #17ffaa;
+  color: hsl(158, 100%, 35%);
 }
 #t1:hover h3 {
   background-color: #17ffaa;
   color: white;
 }
+#t1:hover i {
+  color: #17ffaa;
+}
+#t1:hover a {
+  background-color: #17ffaa;
+  color: hsl(158, 100%, 35%);
+}
 #t1:hover ~ #bg {
   background-color: hsl(158, 100%, 35%);
+  z-index: 3;
 }
 
 #t2 {
-  transition: color 1.5s ease, background-color 1.5s ease;
+  transition: color 0.5s ease, background-color 0.5s ease;
 }
-#t2::selection {
+#t2 p::selection {
   background-color: hsl(295, 58%, 42%);
+  color: white;
 }
 #t2 h3 {
   background-color: hsl(295, 58%, 42%);
@@ -73,18 +115,259 @@ p {
   background-color: white;
   color: hsl(295, 58%, 42%);
 }
+#t2 i {
+  color: hsl(295, 58%, 42%);
+}
+#t2 a {
+  color: hsl(295, 58%, 42%);
+}
 #t2:hover {
   color: white;
+  z-index: 4;
 }
-#t2:hover::selection {
-  background-color: hsl(295, 58%, 42%);
+#t2:hover p::selection {
+  background-color: #ca5bd4;
+  color: hsl(295, 58%, 42%);
 }
 #t2:hover h3 {
   background-color: #ca5bd4;
   color: white;
 }
+#t2:hover i {
+  color: #ca5bd4;
+}
+#t2:hover a {
+  background-color: #ca5bd4;
+  color: hsl(295, 58%, 42%);
+}
 #t2:hover ~ #bg {
   background-color: hsl(295, 58%, 42%);
+  z-index: 3;
+}
+
+#t3 {
+  transition: color 0.5s ease, background-color 0.5s ease;
+}
+#t3 p::selection {
+  background-color: #FF8B75;
+  color: white;
+}
+#t3 h3 {
+  background-color: #FF8B75;
+  color: white;
+}
+#t3 h3::selection {
+  background-color: white;
+  color: #FF8B75;
+}
+#t3 i {
+  color: #FF8B75;
+}
+#t3 a {
+  color: #FF8B75;
+}
+#t3:hover {
+  color: white;
+  z-index: 4;
+}
+#t3:hover p::selection {
+  background-color: #ffae9e;
+  color: #FF8B75;
+}
+#t3:hover h3 {
+  background-color: #ffae9e;
+  color: white;
+}
+#t3:hover i {
+  color: #ffae9e;
+}
+#t3:hover a {
+  background-color: #ffae9e;
+  color: #FF8B75;
+}
+#t3:hover ~ #bg {
+  background-color: #FF8B75;
+  z-index: 3;
+}
+
+#t4 {
+  transition: color 0.5s ease, background-color 0.5s ease;
+}
+#t4 p::selection {
+  background-color: #6970FF;
+  color: white;
+}
+#t4 h3 {
+  background-color: #6970FF;
+  color: white;
+}
+#t4 h3::selection {
+  background-color: white;
+  color: #6970FF;
+}
+#t4 i {
+  color: #6970FF;
+}
+#t4 a {
+  color: #6970FF;
+}
+#t4:hover {
+  color: white;
+  z-index: 4;
+}
+#t4:hover p::selection {
+  background-color: #969bff;
+  color: #6970FF;
+}
+#t4:hover h3 {
+  background-color: #969bff;
+  color: white;
+}
+#t4:hover i {
+  color: #969bff;
+}
+#t4:hover a {
+  background-color: #969bff;
+  color: #6970FF;
+}
+#t4:hover ~ #bg {
+  background-color: #6970FF;
+  z-index: 3;
+}
+
+#t5 {
+  transition: color 0.5s ease, background-color 0.5s ease;
+}
+#t5 p::selection {
+  background-color: #E164FF;
+  color: white;
+}
+#t5 h3 {
+  background-color: #E164FF;
+  color: white;
+}
+#t5 h3::selection {
+  background-color: white;
+  color: #E164FF;
+}
+#t5 i {
+  color: #E164FF;
+}
+#t5 a {
+  color: #E164FF;
+}
+#t5:hover {
+  color: white;
+  z-index: 4;
+}
+#t5:hover p::selection {
+  background-color: #ea93ff;
+  color: #E164FF;
+}
+#t5:hover h3 {
+  background-color: #ea93ff;
+  color: white;
+}
+#t5:hover i {
+  color: #ea93ff;
+}
+#t5:hover a {
+  background-color: #ea93ff;
+  color: #E164FF;
+}
+#t5:hover ~ #bg {
+  background-color: #E164FF;
+  z-index: 3;
+}
+
+#t6 {
+  transition: color 0.5s ease, background-color 0.5s ease;
+}
+#t6 p::selection {
+  background-color: cornflowerblue;
+  color: white;
+}
+#t6 h3 {
+  background-color: cornflowerblue;
+  color: white;
+}
+#t6 h3::selection {
+  background-color: white;
+  color: cornflowerblue;
+}
+#t6 i {
+  color: cornflowerblue;
+}
+#t6 a {
+  color: cornflowerblue;
+}
+#t6:hover {
+  color: white;
+  z-index: 4;
+}
+#t6:hover p::selection {
+  background-color: #93b5f2;
+  color: cornflowerblue;
+}
+#t6:hover h3 {
+  background-color: #93b5f2;
+  color: white;
+}
+#t6:hover i {
+  color: #93b5f2;
+}
+#t6:hover a {
+  background-color: #93b5f2;
+  color: cornflowerblue;
+}
+#t6:hover ~ #bg {
+  background-color: cornflowerblue;
+  z-index: 3;
+}
+
+#t7 {
+  transition: color 0.5s ease, background-color 0.5s ease;
+}
+#t7 p::selection {
+  background-color: crimson;
+  color: white;
+}
+#t7 h3 {
+  background-color: crimson;
+  color: white;
+}
+#t7 h3::selection {
+  background-color: white;
+  color: crimson;
+}
+#t7 i {
+  color: crimson;
+}
+#t7 a {
+  color: crimson;
+}
+#t7:hover {
+  color: white;
+  z-index: 4;
+}
+#t7:hover p::selection {
+  background-color: #ef5271;
+  color: crimson;
+}
+#t7:hover h3 {
+  background-color: #ef5271;
+  color: white;
+}
+#t7:hover i {
+  color: #ef5271;
+}
+#t7:hover a {
+  background-color: #ef5271;
+  color: crimson;
+}
+#t7:hover ~ #bg {
+  background-color: crimson;
+  z-index: 3;
 }
 
 /*# sourceMappingURL=style.css.map */
