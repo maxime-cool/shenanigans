@@ -13,20 +13,20 @@ li {
 }
 
 #title {
-  position: relative;
+  height: fit-content;
   display: flex;
   overflow: hidden;
 }
 
 h1 {
-  justify-content: end;
   user-select: none;
+  font-size: 5vh;
 }
-h1:nth-child(odd) {
+h1:nth-child(even) {
   color: white;
   z-index: 5;
 }
-h1:nth-child(even) {
+h1:nth-child(odd) {
   color: black;
 }
 
