@@ -14,13 +14,14 @@ li {
 
 #title {
   height: fit-content;
-  display: flex;
+  display: inline-flex;
   overflow: hidden;
 }
 
 h1 {
   user-select: none;
   font-size: 200%;
+  display: inline-block;
 }
 h1:nth-child(even) {
   color: white;
